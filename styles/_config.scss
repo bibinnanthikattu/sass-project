@@ -1,0 +1,96 @@
+// Map for different margin
+$margin:(
+    // in horizontal axis
+    "my":0.5rem 0,
+    "my-1":1rem 0,
+    "my-2":1.5rem 0,
+    "my-3":2rem 0,
+    "my-4":3rem 0,
+    "my-5":4rem 0,
+    // for all sides
+    "m-1":1rem,
+    "m-2":1.5rem ,
+    "m-3":2rem ,
+    "m-4":3rem ,
+    "m-5":4rem 
+);
+// Map list for different padding 
+$padding:(
+    // for horizontal axis
+    "py":0.5rem 0,
+    "py-1":1rem 0,
+    "py-2":1.5rem 0,
+    "py-3":2rem 0,
+    "py-4":3rem 0,
+    "py-5":4rem 0,
+    // for all sides
+    "p":0.5rem,
+    "p-1":1rem,
+    "p-2":1.5rem ,
+    "p-3":2rem ,
+    "p-4":3rem ,
+    "p-5":4rem 
+);
+// padding left and right for container
+@mixin container {
+    width: 100%;
+    padding: 0 8rem ;
+}
+// flexbox alignment
+@mixin flex ($direction ,$h-align ,$v-align ,$wrap) {
+    display: flex;
+    flex-direction:$direction;
+    justify-content: $h-align;
+    align-items:$v-align;
+    flex-wrap: $wrap;
+    gap: 1rem;
+    
+}
+// grid alignment
+@mixin grid ($column,$row,$gap,$h-align,$v-align){
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+    gap: $gap;
+    justify-content: $h-align;
+    align-items: $v-align;
+}
+// transition
+@mixin transition {
+    transition: all 0.5s ease-in-out;
+}
+// buttons
+@mixin button($bg-color) {
+    padding: 0.5rem 1rem;
+    font-size: $text-para;
+    font-family: $font-secondary;
+    color: $light-color;
+    border: none;
+    border-radius: 7px;
+    background-color: $bg-color;
+}
+// cards
+@mixin card{
+    background-color: $light-color;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+    padding: map-get($padding, p-2 );
+}
+// hover animation
+@mixin hover{
+    transition: all 0.3s ease;
+    transform:scale(0.98);
+}
+// media querry for mobile
+@mixin mobile {
+    @media only screen and (max-width:425px){
+        @content;
+    }
+}
+// media querry for mobile
+// @mixin mobile {
+//     @media only screen and (max-width:425px){
+//         @content;
+//     }
+// }
+

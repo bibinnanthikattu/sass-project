@@ -1,0 +1,42 @@
+.stats {
+    @include container;
+    height: 100vh;
+    padding-top: 8rem;
+    color: $shadow-color;
+    &-subhead{
+        width: 75%;
+        text-align: center;
+        font-size: $text-section-subhead;
+        font-weight: 100;
+        margin: 0 auto;
+        padding-bottom: map-get($padding, p-5)
+    }
+    &-dwnlds {
+        @include flex(row,space-between,center,wrap);
+        &-item {
+            @include flex(column,center,center,wrap);
+            width: 18rem;
+            height: 15rem;
+            &-no {
+                padding: map-get($padding, py-1);
+                font-size: $text-section-head;
+            }
+            &-desc{
+                font-size: $text-para;
+            }
+        }
+    }
+    #{&}-install {
+        @include grid (1fr 1fr 1fr,1fr 1fr,1rem,center,center);
+        width: 100%;
+        height: 30vh;
+        &>picture{
+            width: 100%;
+            grid-column: 1/3;
+            grid-row: 1/ span 2;
+            & > img {
+                width: 100%;
+            }
+        }
+    }
+}
