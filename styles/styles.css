@@ -260,6 +260,7 @@ header .nav .humburger.active .bar::after {
   border: none;
   border-radius: 7px;
   background-color: transparent;
+  cursor: pointer;
   border: 1px solid #f4f4f4;
   cursor: pointer;
 }
@@ -350,6 +351,7 @@ header .nav .humburger.active .bar::after {
   border: none;
   border-radius: 7px;
   background-color: #047aed;
+  cursor: pointer;
   width: 6rem;
   cursor: pointer;
 }
@@ -728,6 +730,7 @@ header .nav .humburger.active .bar::after {
   border: none;
   border-radius: 7px;
   background-color: #002240;
+  cursor: pointer;
   font-size: 1.2rem;
 }
 
@@ -791,6 +794,77 @@ header .nav .humburger.active .bar::after {
     gap: 1rem;
     height: auto;
     padding: 0 1.5rem;
+  }
+}
+
+.lang {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+}
+
+.lang .lang-head {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.lang .lang-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.lang .lang-box-card {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  width: 8rem;
+  height: 10rem;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.lang .lang-box-card:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+}
+
+@media screen and (max-width: 625px) {
+  .lang .lang-box-card {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .lang .lang-box-card > img {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .lang {
+    padding: 0 1rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

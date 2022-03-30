@@ -68,6 +68,7 @@ $padding:(
     border: none;
     border-radius: 7px;
     background-color: $bg-color;
+    cursor: pointer;
 }
 // cards
 @mixin card{

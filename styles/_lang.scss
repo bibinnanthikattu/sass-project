@@ -1,0 +1,41 @@
+.lang {
+    width: 100%;
+    height: auto;
+    padding: map-get($padding, p-2);
+    #{&}-head {
+        width: 100%;
+        text-align: center;
+        font-size: $text-section-head;
+        font-weight: 100;
+    }
+    #{&}-box {
+        @include flex(row,center,center,wrap);
+        width: 100%;
+        margin: map-get($margin, my-2 );
+        &-card {
+            @include card;
+            width: 8rem;
+            height: 10rem;
+            padding: 0.8rem;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                @include transition;
+                transform: translateY(-12px);
+            }
+            // lang section card style for mobile screen
+            @include mobile {
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1rem;
+                & > img {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    // lang section styles for mobile screen
+    @include mobile {
+        padding: 0 1rem;
+    }
+}
