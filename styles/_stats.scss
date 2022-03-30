@@ -91,11 +91,12 @@
     }
     // stats section styles  for mobile screen
     @include mobile {
+        height: auto;
         padding: 5rem 1rem;
     }
     //stats section styles for tablet screen
     @include tablet {
-        height: 80vh;
+        height: auto;
         padding: 5rem 1.5rem 2rem 1.5rem;
     }
 }
