@@ -13,10 +13,15 @@ header {
             color: $light-color;
             font-family: $font-primary;
             font-weight: 100;
+            // media querry for mobile logo
+            @include mobile {
+                & {
+                    font-size: 1.5rem;
+                }
+            }
         }
         &-menu{
             @include flex(row,space-around,center,nowrap);
-            width: 100%;
             &-item {
                 margin: map-get($margin, m-1);
             }
@@ -36,18 +41,23 @@ header {
                 
               
             }   
+            // media queryy for mobile menu 
             @include mobile {
                 .nav-menu {
-                    display: none;
+                   position: absolute;
+                   top: -100%;
+                   left: 0;
                 }
                 .active.nav-menu {
-                    @include flex(column,center,center,1rem);
-                    width: 500px;
-                    height: 25vh;
+                    @include transition;
+                    @include flex(column,center,center,5px);
+                    width: 100%;
+                    height: 40vh;
                     position: absolute;
                     left: 0;
-                    top: 16rem;
-                    background-color: $error-color;                               
+                    top: 11vh;  
+                    z-index: 999; 
+                    background-color: $primary-color;                                         
                 }    
         }
        
@@ -98,14 +108,19 @@ header {
                     transform: translateY(-10px) rotate(-45deg);
                 }
             }
-             // media querry 
+             // media querry for mobile humburger
         @include mobile {
             display: block;
         }
       
         }
+        // media querry for mobile nav bar
         @include mobile {
             padding: 0 1rem;
+        }
+        // styles for tablet nav bar
+        @include tablet {
+            padding: 0 1.5rem;
         }
        
     }

@@ -1,7 +1,7 @@
 .stats {
     @include container;
     height: 100vh;
-    padding-top: 8rem;
+    padding-top: 5rem;
     color: $shadow-color;
     &-subhead{
         width: 75%;
@@ -9,7 +9,19 @@
         font-size: $text-section-subhead;
         font-weight: 100;
         margin: 0 auto;
-        padding-bottom: map-get($padding, p-5)
+        padding-bottom: map-get($padding, p-5);
+        // styles mobile screen
+        @include mobile {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+        // styles for tablet screen
+        @include tablet {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
     }
     &-dwnlds {
         @include flex(row,space-between,center,wrap);
@@ -23,13 +35,28 @@
             }
             &-desc{
                 font-size: $text-para;
+                color: $primary-color;
             }
         }
+        // stats section dwnlds portion styles for mobile screen
+        @include mobile {
+            @include flex(column,center,center,wrap)
+        }
+        // stats section dwnlds portion styles for tablet screen
+        @include tablet {
+            width: 100%;
+            @include flex(row, space-evenly, center,nowarp);
+            &-item {
+                width: 12rem;
+            }
+        }
+
     }
     #{&}-install {
         @include grid (1fr 1fr 1fr,1fr 1fr,1rem,center,center);
         width: 100%;
         height: 30vh;
+        margin: map-get($margin, my-3);
         &>picture{
             width: 100%;
             grid-column: 1/3;
@@ -38,5 +65,37 @@
                 width: 100%;
             }
         }
+        &-desc {
+            @include card ;
+            text-align: center;
+           
+        }
+        // stats section install portion styles for mobile screen
+        @include mobile {
+            @include grid (1fr,1fr 1fr 1fr, 3rem,center,center);
+            &>picture{
+                grid-column: 1;
+            }
+            &-desc {
+                width: 100%;
+            }
+        }
+        // stats section install portion styles for tablet screen
+        @include tablet {
+            @include grid(1fr 1fr , 1fr 1fr, 2rem, center ,center);
+            &>picture{
+                grid-column: 1/3;
+            }
+        }
+
+    }
+    // stats section styles  for mobile screen
+    @include mobile {
+        padding: 5rem 1rem;
+    }
+    //stats section styles for tablet screen
+    @include tablet {
+        height: 80vh;
+        padding: 5rem 1.5rem 2rem 1.5rem;
     }
 }

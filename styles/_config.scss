@@ -83,14 +83,14 @@ $padding:(
 }
 // media querry for mobile
 @mixin mobile {
-    @media only screen and (max-width:425px){
+    @media  screen and (max-width:425px){
         @content;
     }
 }
-// media querry for mobile
-// @mixin mobile {
-//     @media only screen and (max-width:425px){
-//         @content;
-//     }
-// }
+// media querry for tablets
+@mixin tablet {
+    @media screen and (min-width:426px) and (max-width:768px){
+        @content;
+    }
+}
 

@@ -27,6 +27,18 @@
                 @include hover;
             }
         }
+        // mobile screen
+        @include mobile {
+            width: 100%;
+            height: 75%;
+            margin: 0;
+            text-align: center;
+        }
+        // styles for tablet screen
+        @include tablet {
+            width: 55%;
+            margin-top: 2rem;
+        }
     }
     #{&}-form{
         
@@ -68,6 +80,26 @@
                 }
             }
         }
+        // mobile querry
+        @include mobile {
+            width: 100%;
+            & .form{
+                width: 100%;
+                height: 22rem;
+                top: 5%;
+                left: 0;
+            }
+        }
+        // styles for tablet screen
+        @include tablet {
+            width: 42%;
+            & .form{
+                width: 100%;
+                height: 22rem;
+                top: 10%;
+                left: 0;
+            }
+        }
     }
     &::after {
         content: '';
@@ -80,5 +112,16 @@
         height: 8rem;
         background-color:#ffff;
         transform:  skewy(-4deg);
+    }
+    // mobile screen
+    @include mobile {
+        @include flex(column ,center,center,nowrap);
+        padding: 1.5rem 1rem;
+        height: 80vh;;
+      }
+    //   styles for tablet
+    @include tablet {
+        padding: 0 1.5rem;
+        height: 40vh;
     }
 }

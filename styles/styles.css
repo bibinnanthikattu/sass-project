@@ -50,7 +50,6 @@ header .nav {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: visible;
 }
 
 header .nav .logo > h1 > a {
@@ -58,6 +57,12 @@ header .nav .logo > h1 > a {
   color: #f4f4f4;
   font-family: "Space Mono", monospace, sans-serif;
   font-weight: 100;
+}
+
+@media screen and (max-width: 425px) {
+  header .nav .logo > h1 > a {
+    font-size: 1.5rem;
+  }
 }
 
 header .nav-menu {
@@ -76,7 +81,6 @@ header .nav-menu {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   gap: 1rem;
-  width: 100%;
 }
 
 header .nav-menu-item {
@@ -97,11 +101,15 @@ header .nav-menu-link:hover {
   border-bottom: 2px solid #d9534f;
 }
 
-@media only screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   header .nav .nav-menu {
-    display: none;
+    position: absolute;
+    top: -100%;
+    left: 0;
   }
   header .nav .active.nav-menu {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -115,13 +123,16 @@ header .nav-menu-link:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-wrap: 1rem;
-        flex-wrap: 1rem;
+    -ms-flex-wrap: 5px;
+        flex-wrap: 5px;
     gap: 1rem;
-    width: 500px;
-    height: 25vh;
-    margin-top: 10rem;
-    background-color: #d9534f;
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    left: 0;
+    top: 11vh;
+    z-index: 999;
+    background-color: #047aed;
   }
 }
 
@@ -180,15 +191,21 @@ header .nav .humburger.active .bar::after {
           transform: translateY(-10px) rotate(-45deg);
 }
 
-@media only screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   header .nav .humburger {
     display: block;
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
   header .nav {
     padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  header .nav {
+    padding: 0 1.5rem;
   }
 }
 
@@ -252,6 +269,22 @@ header .nav .humburger.active .bar::after {
   transition: all 0.3s ease;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+@media screen and (max-width: 425px) {
+  .hero .hero-content {
+    width: 100%;
+    height: 75%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .hero .hero-content {
+    width: 55%;
+    margin-top: 2rem;
+  }
 }
 
 .hero .hero-form {
@@ -328,6 +361,30 @@ header .nav .humburger.active .bar::after {
           transform: scale(0.98);
 }
 
+@media screen and (max-width: 425px) {
+  .hero .hero-form {
+    width: 100%;
+  }
+  .hero .hero-form .form {
+    width: 100%;
+    height: 22rem;
+    top: 5%;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .hero .hero-form {
+    width: 42%;
+  }
+  .hero .hero-form .form {
+    width: 100%;
+    height: 22rem;
+    top: 10%;
+    left: 0;
+  }
+}
+
 .hero::after {
   content: '';
   position: absolute;
@@ -342,11 +399,41 @@ header .nav .humburger.active .bar::after {
           transform: skewy(-4deg);
 }
 
+@media screen and (max-width: 425px) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    height: 80vh;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .hero {
+    padding: 0 1.5rem;
+    height: 40vh;
+  }
+}
+
 .stats {
   width: 100%;
   padding: 0 8rem;
   height: 100vh;
-  padding-top: 8rem;
+  padding-top: 5rem;
   color: #333;
 }
 
@@ -357,6 +444,22 @@ header .nav .humburger.active .bar::after {
   font-weight: 100;
   margin: 0 auto;
   padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 425px) {
+  .stats-subhead {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .stats-subhead {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .stats-dwnlds {
@@ -406,6 +509,53 @@ header .nav .humburger.active .bar::after {
 
 .stats-dwnlds-item-desc {
   font-size: 1rem;
+  color: #047aed;
+}
+
+@media screen and (max-width: 425px) {
+  .stats-dwnlds {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .stats-dwnlds {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowarp;
+        flex-wrap: nowarp;
+    gap: 1rem;
+  }
+  .stats-dwnlds-item {
+    width: 12rem;
+  }
 }
 
 .stats .stats-install {
@@ -424,6 +574,7 @@ header .nav .humburger.active .bar::after {
           align-items: center;
   width: 100%;
   height: 30vh;
+  margin: 2rem 0;
 }
 
 .stats .stats-install > picture {
@@ -438,5 +589,75 @@ header .nav .humburger.active .bar::after {
 
 .stats .stats-install > picture > img {
   width: 100%;
+}
+
+.stats .stats-install-desc {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  .stats .stats-install {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stats .stats-install > picture {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .stats .stats-install-desc {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .stats .stats-install {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stats .stats-install > picture {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .stats {
+    padding: 5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .stats {
+    height: 80vh;
+    padding: 5rem 1.5rem 2rem 1.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
