@@ -1,0 +1,55 @@
+footer {
+    @include container;
+    @include flex(row,space-between,center,wrap);
+    width: 100%;
+    height: 40vh;
+    background-color: $dark-color;
+    color: $light-color;
+    & .footer-logo{
+        &>h1{
+       font-weight: 100;
+       font-family: $font-primary;
+       margin-bottom: 1rem;
+       &>a {
+           color: $light-color;
+           font-size: 2rem;
+       }
+    }
+    }
+    & .footer-menu > li{
+        padding:map-get($padding, py ) ;
+        & > a {
+            color: $light-color;
+            font-size: $text-nav;
+            &:hover {
+                @include transition;
+                color: $error-color;
+                border-bottom: 2px solid $error-color;
+            }
+        }
+        
+    }
+    & .footer-social >a {
+        color: $light-color;
+        padding-right: 1rem;
+        &:hover{
+            @include transition;
+            color: $error-color;
+        }
+        // footer social media icons styles for mobile screen
+        @include mobile {
+            padding-right: .4rem;
+        }
+    }
+    //footer styles for mobile screen 
+    @include mobile {
+        padding: 2rem 2rem;
+        height: auto;
+        @include flex (column,center,flex-start,nowrap);
+        gap: 2rem;
+    }
+    // footer styles for tablet screen
+    @include tablet {
+        padding: 0 1.5rem;
+    }
+}

@@ -11,6 +11,7 @@ html, body {
   max-width: 100vw;
   height: 100%;
   font-family: "Didact Gothic", sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
@@ -865,6 +866,105 @@ header .nav .humburger.active .bar::after {
 @media screen and (max-width: 625px) {
   .lang {
     padding: 0 1rem;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 0 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  height: 40vh;
+  background-color: #002240;
+  color: #f4f4f4;
+}
+
+footer .footer-logo > h1 {
+  font-weight: 100;
+  font-family: "Space Mono", monospace, sans-serif;
+  margin-bottom: 1rem;
+}
+
+footer .footer-logo > h1 > a {
+  color: #f4f4f4;
+  font-size: 2rem;
+}
+
+footer .footer-menu > li {
+  padding: 0.5rem 0;
+}
+
+footer .footer-menu > li > a {
+  color: #f4f4f4;
+  font-size: 1.2rem;
+}
+
+footer .footer-menu > li > a:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color: #d9534f;
+  border-bottom: 2px solid #d9534f;
+}
+
+footer .footer-social > a {
+  color: #f4f4f4;
+  padding-right: 1rem;
+}
+
+footer .footer-social > a:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color: #d9534f;
+}
+
+@media screen and (max-width: 625px) {
+  footer .footer-social > a {
+    padding-right: .4rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  footer {
+    padding: 2rem 2rem;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 1rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 626px) and (max-width: 768px) {
+  footer {
+    padding: 0 1.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
