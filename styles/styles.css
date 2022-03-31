@@ -966,4 +966,301 @@ footer .footer-social > a:hover {
     padding: 0 1.5rem;
   }
 }
+
+.hero-docs {
+  width: 100%;
+  padding: 0 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  height: 50vh;
+  background-color: #047aed;
+}
+
+.hero-docs .hero-docs_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 50%;
+  height: 100%;
+  color: #f4f4f4;
+}
+
+.hero-docs .hero-docs_content-head {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.hero-docs .hero-docs_content-para {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 625px) {
+  .hero-docs .hero-docs_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.hero-docs > picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 45%;
+}
+
+.hero-docs > picture > img {
+  width: 250px;
+  height: 200px;
+}
+
+@media screen and (max-width: 625px) {
+  .hero-docs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 626px) and (max-width: 768px) {
+  .hero-docs {
+    padding: 0 1.5rem;
+  }
+}
+
+.install {
+  height: auto;
+  width: 100%;
+  padding: 0 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.install .install-docs {
+  width: 300px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.install .install-docs-head {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin: 2rem 0;
+}
+
+.install .install-docs-link > li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 625px) {
+  .install .install-docs {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 626px) and (max-width: 768px) {
+  .install .install-docs {
+    width: 70%;
+  }
+}
+
+.install .install-introduction {
+  width: 65%;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.install .install-introduction-head {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0.5rem 0;
+}
+
+.install .install-introduction-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: #5cb85c;
+  color: #f4f4f4;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.install .install-introduction-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: "Didact Gothic", sans-serif;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 7px;
+  background-color: #047aed;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.install .install-introduction-code {
+  width: 100%;
+  height: 3rem;
+  background-color: #333;
+  line-height: 3rem;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #f4f4f4;
+}
+
+@media screen and (max-width: 625px) {
+  .install .install-introduction {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 626px) and (max-width: 768px) {
+  .install .install-introduction {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .install {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 626px) and (max-width: 768px) {
+  .install {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1rem;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
